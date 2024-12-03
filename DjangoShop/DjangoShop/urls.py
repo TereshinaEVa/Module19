@@ -1,5 +1,5 @@
 """
-URL configuration for DjangoShop project.
+URL configuration for UrbanDjango project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -16,7 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import TemplateView
+from task1.views import *
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('platform/', platform_menu),
+    path('platform/games/', games_menu),
+    path('platform/cart/', cart_str),
+    path('', sing_up_by_html),
+    path('registration/', sing_up_by_django),
 ]

@@ -1,0 +1,16 @@
+{% extends "fourth_task/menu.html" %}
+
+{% block pagename %}
+    <h1>{{ title }}</h1>
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <h2>Извините, Ваша корзина пуста</h2>
+<p><button onclick="window.location.href='/platform'"> На главную </button>
+    <button onclick="window.location.href='/platform/games/'"> В магазин </button>
+</p>
+{% endblock %}

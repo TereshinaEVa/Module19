@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = 'stylesheet' type="text/css" href='{% static "style.css" %}'>
+</head>
+<body>
+    {% block pagename %}{% endblock %}
+
+    {% block menu %}
+    <p><a href="/platform"><h3>Главная</h3></a> </p>
+    <p><a href="/platform/games"><h3>Магазин</h3></a> </p>
+    <p><a href="/platform/cart"><h3>Корзина</h3></a></p>
+    {% endblock %}
+
+    {% block content %}
+    <p>
+        <button onclick="window.location.href='/registration'"> Регистрация </button>
+    </p>
+    {% endblock %}
+</body>
+</html>
