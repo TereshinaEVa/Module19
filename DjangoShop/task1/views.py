@@ -46,7 +46,7 @@ def sing_up_by_django(request):
             repeat_password = form.cleaned_data['repeat_password']
             age = form.cleaned_data['age']
 
-            if login in bayers:
+            if login in str(bayers):
                 info['error'] = 'Пользователь уже существует'
             elif password != repeat_password:
                 info['error'] = 'Пароли не совпадают'
@@ -70,7 +70,7 @@ def sing_up_by_html(request):
         repeat_password = request.POST.get('repeat_password')
         age = request.POST.get('age')
 
-        if login in bayers:
+        if login in str(bayers):
             info['error'] = 'Пользователь уже существует'
         elif password != repeat_password:
             info['error'] = 'Пароли не совпадают'
